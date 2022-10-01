@@ -1,0 +1,81 @@
+body {
+    font-family: "Helvetica Neue", Helvetica, sans-serif;
+}
+
+h1 {
+    padding: 4%;
+    padding-bottom: 0%;
+
+    text-align: center;
+}
+
+.wordle {
+    display: grid;
+    grid-area: wordle;
+    grid-template-columns: repeat(5, 70px);
+    grid-template-rows: repeat(7, 70px);
+
+    padding: 5%;
+    padding-bottom: 0%;
+    justify-content: center;
+}
+
+#eingabefeldAussen {
+    text-align: center;
+}
+
+#eingabefeld {
+    grid-area: input;
+
+    box-sizing: border-box;
+    height: 70px;
+    width: 250px;
+
+    font-size: 2rem;
+    font-weight: 500;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#anleitung {
+    grid-area: anleitung;
+}
+
+.tafel {
+    display: grid;
+    grid-template-areas:
+        "wordle anleitung"
+        "input anleitung";
+    gap: 10px;
+}
+
+#wort {
+    text-transform: uppercase;
+}
+
+.wordle>div {
+    display: inline-flex;
+
+    /* border-style: solid;
+    borde.r-radius: 4px;
+    border-color: black; */
+
+    justify-content: center;
+    align-items: center;
+    margin: 3px;
+
+    font-size: 2rem;
+    font-weight: 500;
+    color: white;
+    text-transform: uppercase;
+
+    background-color: #787c7e;
+}
+
+#w11 {
+    background-color: #c9b458;
+}
+
+#w12 {
+    background-color: #6aaa64;
+}
