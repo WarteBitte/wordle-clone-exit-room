@@ -28,5 +28,7 @@ function wortEingegeben() {
             document.getElementById("eingabefeld").readOnly = true;
             document.getElementById("eingabefeld").value = richtigesWort;
         }
+    } else if (anzahlWoerter > 5) {
+        document.getElementById("eingabefeld").readOnly = true;
     }
 }
