@@ -37,6 +37,10 @@ h1 {
     text-transform: uppercase;
 }
 
+#anleitungUeberschrift {
+    grid-area: anleitungUeberschrift;
+}
+
 #anleitung {
     grid-area: anleitung;
 }
@@ -44,6 +48,7 @@ h1 {
 .tafel {
     display: grid;
     grid-template-areas:
+        "wordle anleitungUeberschrift"
         "wordle anleitung"
         "input anleitung";
     gap: 10px;
@@ -72,10 +77,10 @@ h1 {
     background-color: #787c7e;
 }
 
-#w11 {
+/* #w11 {
     background-color: #c9b458;
 }
 
 #w12 {
     background-color: #6aaa64;
-}
+} */
