@@ -58,14 +58,9 @@ function faerben(eingegebenesWort) {
 }
 
 function wortEingegeben() {
-<<<<<<< HEAD
-    if (!wortErraten) {
-        let eingegebenesWort = document.getElementById("eingabefeld").value.toLowerCase();
-=======
     if (anzahlWoerter < 6 && !wortErraten) { // testen, ob noch nicht verloren und gewonnen wurde
         let eingegebenesWort = document.getElementById("input").value.toLowerCase();
 
->>>>>>> 3dce4d7 (add keyboard and other optimisations)
         console.log(eingegebenesWort)
 
         if (alleWoerter.includes(eingegebenesWort)) { // falls das wort in der liste aller woerter existiert
@@ -82,20 +77,14 @@ function wortEingegeben() {
             if (eingegebenesWort == richtigesWort) {
                 gewonnen();
             } else if (anzahlWoerter > 5) {
-<<<<<<< HEAD
-                wortErraten = true;
-                document.getElementById("eingabefeld").readOnly = true;
-                document.getElementById("anleitungUeberschrift").innerHTML = richtigesWort;
-=======
                 verloren();
->>>>>>> 3dce4d7 (add keyboard and other optimisations)
             }
 
         } else {
             alert("Wort ist nicht in Wortliste.")
             console.log("Invalides Wort eingegeben.")
         }
-        
+
         input.value = "";
 
     }
