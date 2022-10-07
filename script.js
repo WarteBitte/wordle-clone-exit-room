@@ -4802,7 +4802,7 @@ console.log(richtigesWort);
 let wortErraten = false;
 
 function wortEingegeben() {
-    if (anzahlWoerter < 6 && !wortErraten) {
+    if (!wortErraten) {
         let eingegebenesWort = document.getElementById("eingabefeld").value.toLowerCase();
         console.log(eingegebenesWort)
         if (woerter.includes(eingegebenesWort)) {
@@ -4830,6 +4830,7 @@ function wortEingegeben() {
                 document.getElementById("eingabefeld").readOnly = true;
                 document.getElementById("eingabefeld").value = richtigesWort;
             } else if (anzahlWoerter > 5) {
+                wortErraten = true;
                 document.getElementById("eingabefeld").readOnly = true;
                 document.getElementById("anleitungUeberschrift").innerHTML = richtigesWort;
             }
