@@ -4831,6 +4831,7 @@ function wortEingegeben() {
                 document.getElementById("eingabefeld").value = richtigesWort;
             } else if (anzahlWoerter > 5) {
                 document.getElementById("eingabefeld").readOnly = true;
+                document.getElementById("anleitungUeberschrift").innerHTML = richtigesWort;
             }
         } else {
             console.log("Invalides Wort eingegeben.")
