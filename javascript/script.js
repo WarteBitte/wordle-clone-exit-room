@@ -3,7 +3,7 @@ let wortErraten = false;
 // zufaelliges wort auswaehlen:
 const richtigesWort = zielWoerter[Math.floor(Math.random() * zielWoerter.length)];
 
-console.clear()
+// console.clear()
 console.log(`Richtiges Wort: ${richtigesWort.toUpperCase()}`);
 
 function gewonnen() {
@@ -11,7 +11,8 @@ function gewonnen() {
     document.getElementById("input").readOnly = true;
     document.getElementById("input").value = richtigesWort;
     document.getElementById("nachrichtenFeld").innerHTML = `Richtig! Die Tür hat sich geöffnet.`;
-    document.body.style.backgroundImage = `url(https://github.com/WarteBitte/wordle-clone-exit-room/blob/main/tuer-offen.jpeg?raw=true)`
+    document.body.style.backgroundImage = `url("/images/tuer-offen.jpeg")`
+    document.getElementById("tuer").style.display = "unset";
 
     console.log("Wort erraten!")
 }

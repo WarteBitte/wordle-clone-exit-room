@@ -5,17 +5,53 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/stylesheets/index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
-    <script src="woerter.js"></script>
-    <script src="script.js"></script>
+    <script src="/javascript/woerter.js"></script>
+    <script src="/javascript/script.js"></script>
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
     <title>Exit Room</title>
 </head>
 
 <body>
+    <!-- Navigationsleiste: -->
+    <nav>
+        <a href="grundgerüst.html"> <img src="/images/escaperoom1.png"></a>
+        <ul>
+            <div class="hoverToClickN">
+                <li href="Startseite.html"><button class="hoverToClick">Startseite</button></li>
+            </div>
+            <div class="dropdown">
+                <li><button class="dropbtn dropdown">Räume</button>
+                    <div class="dropdown-content">
+                        <a href="#">Raum 1</a>
+                        <a href="#">Raum 2</a>
+                        <a href="#">Raum 3</a>
+                        <a href="#">Raum 4</a>
+                        <a href="#">Raum 5</a>
+                        <a href="#">Raum 6</a>
+                        <a href="#">Raum 7</a>
+                    </div>
+                </li>
+            </div>
+            <div class="hoverToClickN">
+                <li href="Anleitung.html"><button class="hoverToClick active wichtig">Regeln</button></li>
+            </div>
+            <div class="hoverToClickN">
+                <li href="varianten.html"><button class="hoverToClick active wichtig">Andere Wordle Varianten</button>
+                </li>
+            </div>
+            <div class="hoverToClickN">
+                <li href="Impressum.html"><button class="hoverToClick">Impressum</button></li>
+            </div>
+        </ul>
+    </nav>
+
+    <!-- eigener Inhalt: -->
     <div class="tafel">
+
         <!-- Links: -->
         <div class="wordle">
             <!-- bei der id steht die erste Zahl fuer die Zeile, die zweite fuer die Reihe -->
@@ -107,7 +143,8 @@
 
     </div>
 
-    <img src="https://github.com/WarteBitte/wordle-clone-exit-room/blob/main/tuer-offen.jpeg?raw=true" style="display:none;" alt="" />
+    <a id="tuer" style="display:none;" href="geschafft.html"></a>
+    <img src="/images/tuer-offen.jpeg" style="display:none;" alt="" />
 
 </body>
 
