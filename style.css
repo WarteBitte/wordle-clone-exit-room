@@ -1,5 +1,10 @@
 * {
-    font-family: "Helvetica Neue", Helvetica, sans-serif;
+    font-family: 'Patrick Hand', cursive;
+}
+
+body {
+    background: url(https://github.com/WarteBitte/wordle-clone-exit-room/blob/main/tuer-zu.jpeg?raw=true);
+    background-repeat: no-repeat;
 }
 
 h1 {
@@ -7,54 +12,25 @@ h1 {
     padding-bottom: 0%;
 
     text-align: center;
+
 }
 
 .wordle {
+    /* Wordle Tabelle */
     display: grid;
     grid-template-columns: repeat(5, 70px);
-    grid-template-rows: repeat(7, 70px);
+    grid-template-rows: repeat(6, 70px);
+    grid-area: wordle;
 
-    padding: 5%;
-    padding-bottom: 0%;
-    justify-content: center;
-}
+    /* padding: 5%; */
+    /* padding-bottom: 0%; */
+    /* justify-content: center; */
 
-#eingabeBereich {
-    text-align: center;
-}
 
-#input {
-    box-sizing: border-box;
-    height: 70px;
-    width: 250px;
-
-    font-size: 2rem;
-    font-weight: 500;
-    text-align: center;
-    text-transform: uppercase;
-}
-
-.tafel {
-    display: grid;
-    grid-template-areas:
-        "wordle anleitungUeberschrift"
-        "wordle anleitung"
-        "tastatur anleitung"
-        "input anleitung";
-    gap: 10px;
-    align-items: center;
-    justify-items: center;
-}
-
-span {
-    text-transform: uppercase;
-}
-
-#wort {
-    text-transform: uppercase;
 }
 
 .wordle>div {
+    /* einzelnes Kaestchen in Wordle Tabelle */
     display: inline-flex;
 
     justify-content: center;
@@ -62,7 +38,6 @@ span {
     margin: 3px;
 
     font-size: 2rem;
-    font-weight: 500;
     color: white;
     text-transform: uppercase;
 
@@ -70,35 +45,97 @@ span {
     border: #dbdbdb;
     border-style: solid;
     border-width: 2px;
+
 }
 
-.tastatur { /* Kasten mit der gesamten Tastatur */
+.eingabeBereich {
+    display: flex;
+    grid-area: eingabeBereich;
+
+    align-items: center;
+    justify-content: center;
+}
+
+#input {
+    /* eingabe Bereich */
+    box-sizing: border-box;
+    height: 70px;
+    width: 250px;
+
+    font-size: 2rem;
+    text-align: center;
+    text-transform: uppercase;
+
+
+}
+
+#nachrichtenFeld {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+    height: 2rem;
+
+    grid-area: nachrichtenFeld;
+
+    font-size: 1.5rem;
+    color: white;
+
+    /* background-color: green; */
+}
+
+.tastatur {
+    /* Kasten mit der gesamten Tastatur */
     display: grid;
     grid-template-rows: repeat(3, 1fr);
+    grid-area: tastatur;
+
 }
 
-.tastatur>div { /* einzelne Reihe */
+.tastatur>div {
+    /* einzelne Reihe */
     display: flex;
 
     margin: 0 auto 5px;
+
+
 }
 
-.tastatur>div>div { /* einzelne Taste */
+.tastatur>div>div {
+    /* einzelne Taste */
     display: flex;
-    flex: 1;
     justify-content: center;
     align-items: center;
+    align-self: center;
 
-    font-size: 16px;
-    font-weight: 500;
+    font-size: 27px;
     color: black;
 
-    width: 40px;
+    width: 30px;
     height: 40px;
 
-    padding: 0;
     margin: 0 6px 0 0;
 
     background-color: #f6f6f6;
     border-radius: 10%;
+}
+
+.tafel {
+    display: grid;
+    grid-template-areas:
+        "wordle eingabeBereich"
+        "wordle nachrichtenFeld"
+        "wordle tastatur";
+    width: 850px;
+    height: 550px;
+
+    gap: 20px;
+
+    align-content: center;
+    justify-content: center;
+
+    background: url(https://github.com/WarteBitte/wordle-clone-exit-room/blob/main/tafel.png?raw=true);
+    background-repeat: no-repeat;
+    background-size: 850px 550px;
+
 }

@@ -10,13 +10,14 @@ function gewonnen() {
     wortErraten = true;
     document.getElementById("input").readOnly = true;
     document.getElementById("input").value = richtigesWort;
+    document.getElementById("nachrichtenFeld").innerHTML = `Richtig! Die Tür hat sich geöffnet.`;
 
     console.log("Wort erraten!")
 }
 
 function verloren() {
     document.getElementById("input").readOnly = true;
-    document.getElementById("richtigesWort").innerHTML = richtigesWort;
+    document.getElementById("nachrichtenFeld").innerHTML = `Das richtige Wort war: ${richtigesWort.toUpperCase()}`;
 
     console.log("Wort nicht in 6 Versuchen erraten!")
 }
@@ -81,7 +82,7 @@ function wortEingegeben() {
             }
 
         } else {
-            alert("Wort ist nicht in Wortliste.")
+            document.getElementById("nachrichtenFeld").innerHTML = `"${eingegebenesWort.toUpperCase()}" ist nicht in der Wortliste.`;
             console.log("Invalides Wort eingegeben.")
         }
 

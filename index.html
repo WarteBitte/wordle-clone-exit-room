@@ -6,113 +6,104 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
     <script src="woerter.js"></script>
     <script src="script.js"></script>
     <title>Exit Room</title>
 </head>
 
 <body>
-    <h1>Wordle</h1>
     <div class="tafel">
-        <div id="links">
-            <div class="wordle">
-                <!-- bei der id steht die erste Zahl fuer die Zeile, die zweite fuer die Reihe -->
-                <div id="w11"></div>
-                <div id="w12"></div>
-                <div id="w13"></div>
-                <div id="w14"></div>
-                <div id="w15"></div>
+        <!-- Links: -->
+        <div class="wordle">
+            <!-- bei der id steht die erste Zahl fuer die Zeile, die zweite fuer die Reihe -->
+            <div id="w11"></div>
+            <div id="w12"></div>
+            <div id="w13"></div>
+            <div id="w14"></div>
+            <div id="w15"></div>
 
-                <div id="w21"></div>
-                <div id="w22"></div>
-                <div id="w23"></div>
-                <div id="w24"></div>
-                <div id="w25"></div>
+            <div id="w21"></div>
+            <div id="w22"></div>
+            <div id="w23"></div>
+            <div id="w24"></div>
+            <div id="w25"></div>
 
-                <div id="w31"></div>
-                <div id="w32"></div>
-                <div id="w33"></div>
-                <div id="w34"></div>
-                <div id="w35"></div>
+            <div id="w31"></div>
+            <div id="w32"></div>
+            <div id="w33"></div>
+            <div id="w34"></div>
+            <div id="w35"></div>
 
-                <div id="w41"></div>
-                <div id="w42"></div>
-                <div id="w43"></div>
-                <div id="w44"></div>
-                <div id="w45"></div>
+            <div id="w41"></div>
+            <div id="w42"></div>
+            <div id="w43"></div>
+            <div id="w44"></div>
+            <div id="w45"></div>
 
-                <div id="w51"></div>
-                <div id="w52"></div>
-                <div id="w53"></div>
-                <div id="w54"></div>
-                <div id="w55"></div>
+            <div id="w51"></div>
+            <div id="w52"></div>
+            <div id="w53"></div>
+            <div id="w54"></div>
+            <div id="w55"></div>
 
-                <div id="w61"></div>
-                <div id="w62"></div>
-                <div id="w63"></div>
-                <div id="w64"></div>
-                <div id="w65"></div>
-            </div>
-
-            <div class="tastatur">
-                <div>
-                    <div id="q">Q</div>
-                    <div id="w">W</div>
-                    <div id="e">E</div>
-                    <div id="r">R</div>
-                    <div id="t">T</div>
-                    <div id="z">Z</div>
-                    <div id="u">U</div>
-                    <div id="i">I</div>
-                    <div id="o">O</div>
-                    <div id="p">P</div>
-                    <div id="ü">Ü</div>
-                </div>
-                <div>
-                    <div id="a">A</div>
-                    <div id="s">S</div>
-                    <div id="d">D</div>
-                    <div id="f">F</div>
-                    <div id="g">G</div>
-                    <div id="h">H</div>
-                    <div id="j">J</div>
-                    <div id="k">K</div>
-                    <div id="l">L</div>
-                    <div id="ö">Ö</div>
-                    <div id="ä">Ä</div>
-                </div>
-                <div>
-                    <div id="y">Y</div>
-                    <div id="x">X</div>
-                    <div id="c">C</div>
-                    <div id="v">V</div>
-                    <div id="b">B</div>
-                    <div id="n">N</div>
-                    <div id="m">M</div>
-                </div>
-            </div>
-
-
-            <div id=eingabeBereich>
-                <form onsubmit="wortEingegeben(); return false;">
-                    <input id="input" type="text" autocomplete="off" maxlength="5" pattern="[A-Za-zÄÖÜäöü]{5}"
-                        placeholder="Worte hier">
-                </form>
-            </div>
+            <div id="w61"></div>
+            <div id="w62"></div>
+            <div id="w63"></div>
+            <div id="w64"></div>
+            <div id="w65"></div>
         </div>
 
-        <div id="rechts">
 
-            <h1 id="anleitungUeberschrift">Anleitung:</h1>
-
-            <div id=anleitung>
-                <p>Dies ist ein ULTRACOOLES Wordle und Ich bin die Anleitung.<br>Ich bin cool.<br><br>Blablabla<br><br>Das richtige Wort war: <span id="richtigesWort"></span> 
-                </p>
-            </div>
+        <!-- Rechts: -->
+        <div class="eingabeBereich">
+            <form onsubmit="wortEingegeben(); return false;">
+                <input id="input" type="text" autocomplete="off" maxlength="5" pattern="[A-Za-zÄÖÜäöü]{5}"
+                    placeholder="Worte hier" required>
+            </form>
         </div>
 
-    </div>
+        <div id="nachrichtenFeld"></div>
 
+        <div class="tastatur">
+            <div>
+                <div id="q">Q</div>
+                <div id="w">W</div>
+                <div id="e">E</div>
+                <div id="r">R</div>
+                <div id="t">T</div>
+                <div id="z">Z</div>
+                <div id="u">U</div>
+                <div id="i">I</div>
+                <div id="o">O</div>
+                <div id="p">P</div>
+                <div id="ü">Ü</div>
+            </div>
+            <div>
+                <div id="a">A</div>
+                <div id="s">S</div>
+                <div id="d">D</div>
+                <div id="f">F</div>
+                <div id="g">G</div>
+                <div id="h">H</div>
+                <div id="j">J</div>
+                <div id="k">K</div>
+                <div id="l">L</div>
+                <div id="ö">Ö</div>
+                <div id="ä">Ä</div>
+            </div>
+            <div>
+                <div id="y">Y</div>
+                <div id="x">X</div>
+                <div id="c">C</div>
+                <div id="v">V</div>
+                <div id="b">B</div>
+                <div id="n">N</div>
+                <div id="m">M</div>
+            </div>
+        </div>
 
     </div>
 
