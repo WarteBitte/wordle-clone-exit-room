@@ -11,6 +11,7 @@ function gewonnen() {
     document.getElementById("input").readOnly = true;
     document.getElementById("input").value = richtigesWort;
     document.getElementById("nachrichtenFeld").innerHTML = `Richtig! Die Tür hat sich geöffnet.`;
+    document.body.style.backgroundImage = `url(https://github.com/WarteBitte/wordle-clone-exit-room/blob/main/tuer-offen.jpeg?raw=true)`
 
     console.log("Wort erraten!")
 }

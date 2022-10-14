@@ -129,13 +129,18 @@ h1 {
     width: 850px;
     height: 550px;
 
+    margin-top: 120px;
+    margin-left: 670px;
+
     gap: 20px;
 
     align-content: center;
     justify-content: center;
 
-    background: url(https://github.com/WarteBitte/wordle-clone-exit-room/blob/main/tafel.png?raw=true);
+    background-image: url(https://github.com/WarteBitte/wordle-clone-exit-room/blob/main/tafel.png?raw=true);
     background-repeat: no-repeat;
     background-size: 850px 550px;
+
+    box-shadow: 0px 0px 17px 1px rgba(0, 0, 0, 0.73);
 
 }
