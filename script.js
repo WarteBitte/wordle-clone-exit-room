@@ -11,7 +11,7 @@ function gewonnen() {
     document.getElementById("input").readOnly = true;
     document.getElementById("input").value = richtigesWort;
     document.getElementById("nachrichtenFeld").innerHTML = `Richtig! Die Tür hat sich geöffnet.`;
-    document.body.style.backgroundImage = `url("/images/tuer-offen.jpeg")`
+    document.body.style.backgroundImage = `url("tuer-offen.jpeg")`
     document.getElementById("tuer").style.display = "unset";
 
     console.log("Wort erraten!")

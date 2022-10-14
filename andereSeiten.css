@@ -1,6 +1,6 @@
 body {
     display: grid;
-    background: url("/images/repeating-background.jpeg");
+    background: url("repeating-background.jpeg");
     font-family: 'Roboto Mono', monospace;
 }
 .content {

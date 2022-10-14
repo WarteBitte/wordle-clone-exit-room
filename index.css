@@ -4,7 +4,7 @@
 
 body {
     display: grid;
-    background: url("/images/tuer-zu.jpeg");
+    background: url("tuer-zu.jpeg");
 
     background-repeat: no-repeat;
 }
@@ -147,7 +147,7 @@ body {
     align-content: center;
     justify-content: center;
 
-    background-image: url("/images/tafel.png");
+    background-image: url("tafel.png");
     background-repeat: no-repeat;
     background-size: 850px 550px;
 
